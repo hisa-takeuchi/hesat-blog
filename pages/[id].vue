@@ -23,6 +23,11 @@
       </div>
     </div>
     <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
+    <div class="text-center mt-16">
+      <nuxt-link to="/" class="btn btn-wide">
+        戻る
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

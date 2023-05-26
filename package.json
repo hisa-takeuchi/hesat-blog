@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .ts,.js,.vue .",
-    "format": "prettier -w /src/*.{ts,vue} && prettier -w /src/**/*.{ts,vue}",
+    "format": "prettier -w /src/*.{js,ts,vue} && prettier -w /src/**/*.{js,ts,vue}",
     "fix": "yarn format && yarn lint"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "daisyui": "^2.51.6",
     "dayjs": "^1.11.7",
     "nuxt-microcms-module": "^3.0.1"
   }

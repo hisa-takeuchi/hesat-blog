@@ -5,12 +5,22 @@ export default defineNuxtConfig({
   microCMS: {
     apiKey: process.env.MICROCMS_API_KEY,
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-    target: process.env.NODE_ENV === 'production' ? 'server' : 'all'
+    target: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
   tailwindcss: {
     config: {
       content: [],
       plugins: [tailwindTypography],
+    },
+  },
+  css: ["@/assets/styles/tailwind.css"],
+  build: {
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+        },
+      },
     },
   },
 })

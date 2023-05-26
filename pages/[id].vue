@@ -22,7 +22,10 @@
         {{ dateFormat(data.publishedAt ?? data.createdAt) }}
       </div>
     </div>
-    <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
+    <template v-for="content in data.contents">
+      <div v-if="content.fieldId === 'richEditor'" v-html="content.richEditor" class="prose mt-6 md:mt-10" />
+      <div v-if="content.fieldId === 'html'" v-html="content.html" class="prose mt-6 md:mt-10" />
+    </template>
     <div class="text-center mt-16">
       <nuxt-link to="/" class="btn btn-wide">
         戻る
@@ -40,6 +43,7 @@ const { data } = await useMicroCMSGetListDetail<Blog>({
   endpoint: 'blogs',
   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
 })
+console.log(data)
 </script>
 
 <style scoped></style>

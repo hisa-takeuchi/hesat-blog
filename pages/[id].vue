@@ -1,5 +1,5 @@
 <template>
-  <template v-if="data">
+  <div v-if="data">
     <h1 class="text-3xl font-semibold">
       {{ data.title }}
     </h1>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
-  </template>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -35,9 +35,6 @@ const { data } = await useMicroCMSGetListDetail<Blog>({
   endpoint: 'blogs',
   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
 })
-
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

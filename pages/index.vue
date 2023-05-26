@@ -33,16 +33,14 @@
   </ul>
 </template>
 
-
 <script setup lang="ts">
-import { Blog } from "~/types/blog"
+import { Blog } from '~/types/blog'
+
+const config = useRuntimeConfig()
 
 const { data } = await useMicroCMSGetList<Blog>({
   endpoint: 'blogs',
 })
-console.log(data)
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

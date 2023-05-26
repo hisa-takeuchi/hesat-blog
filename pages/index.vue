@@ -1,7 +1,5 @@
 <template>
-  <h1 class="text-center font-sans text-4xl font-semibold">
-    Nuxt3 Jamstack Blogs
-  </h1>
+  <h1 class="text-center font-sans text-4xl font-semibold">he's at Blog</h1>
   <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink

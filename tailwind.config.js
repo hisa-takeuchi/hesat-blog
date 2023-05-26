@@ -5,7 +5,13 @@ module.exports = {
     './pages/**/*.{vue,js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        notosansjp: ['Noto Sans JP', 'sans-serif'],
+      }
+    },
+    container: {
+    }
   },
   plugins: [require("daisyui")],
 }

@@ -13,7 +13,10 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography],
     },
   },
-  css: ["@/assets/styles/tailwind.css"],
+  css: [
+    "@/assets/styles/kantan/css/style.css",
+    "@/assets/styles/tailwind.css"
+  ],
   build: {
     postcss: {
       postcssOptions: {

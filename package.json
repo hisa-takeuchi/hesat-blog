@@ -12,18 +12,19 @@
     "fix": "yarn format && yarn lint"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18",
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
-    "@typescript-eslint/parser": "^5.59.7",
-    "@vue/eslint-config-prettier": "^7.1.0",
-    "eslint": "^8.41.0",
-    "eslint-plugin-vue": "^9.14.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
     "nuxt": "<3.5.0",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "daisyui": "^2.51.6",

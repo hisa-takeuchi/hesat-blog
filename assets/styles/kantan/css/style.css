@@ -1,0 +1,1000 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  子ページ 大見出し
+--------------------------------------------------------- */
+
+.c-childPageTitle {
+    background-color: theme(colors.bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    padding: 40px 24px;
+}
+
+.c-childPageTitle__text {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+    .c-childPageTitle {
+        padding: 40px 80px;
+    }
+
+    .c-childPageTitle__text {
+        font-size: 40px;
+    }
+}
+
+/* ---------------------------------------------------------
+  サイドバー パーツ
+--------------------------------------------------------- */
+
+.c-sidebar__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .c-sidebar__title {
+        margin-bottom: 24px;
+    }
+
+    .c-sidebar .c-linkList {
+        gap: 8px;
+    }
+
+    .c-sidebar .c-linkList--underLine {
+        gap: 0;
+    }
+
+    .c-sidebar .c-linkList__contents {
+        font-size: 0.875em;
+        padding: 16px calc(8px + 24px + 4px) 16px 16px;
+    }
+
+    .c-sidebar .c-linkList__contents::after {
+        right: 8px;
+    }
+
+    .c-sidebar .c-linkList__contents:hover::after {
+        transform: translate(4px, -50%);
+    }
+}
+/* ---------------------------------------------------------
+  コラムページ 独自スタイル
+--------------------------------------------------------- */
+.p-columnPost {
+    padding: 64px 0 80px;
+}
+
+.p-columnThumbnail {
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-primary);
+    border-radius: var(--border-radius-primary);
+    overflow: hidden;
+}
+
+.p-columnThumbnail img {
+    width: 100%;
+}
+
+.p-columnPostDate {
+    display: flex;
+    gap: 24px;
+}
+
+.p-columnBottomLink {
+    margin-top: 40px;
+    border-top: 1px solid thtme(borderPrimary);
+    padding-top: 24px;
+}
+
+/* 投稿記事 */
+.p-columnPostHeader {
+    padding-bottom: 8px;
+    margin-bottom: 48px;
+}
+
+.p-columnPostTitle {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.5;
+    border-bottom: 1px solid theme(colors.border-light);
+    padding-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.p-columnPostCategories {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.p-columnCategoryTitle {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .p-columnPost {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .p-columnCategoryTitle {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+}
+
+/* ---------------------------------------------------------
+  メインコンテンツ 設定用
+--------------------------------------------------------- */
+
+.l-main {
+    padding-top: 65px;
+    flex: 1;
+}
+
+.l-mainContents {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+    .l-mainContents {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+/* ---------------------------------------------------------
+  カード型パーツ
+--------------------------------------------------------- */
+.c-card {
+    height: 100%;
+}
+
+.c-card__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.c-card__title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.c-card__text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.c-card__image img {
+    width: 100%;
+}
+
+/* タグ */
+.c-card__tagList {
+    font-size: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+}
+
+.c-card__tag {
+    color: theme(colors.light);
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: theme(colors.accent-primary);
+    border-radius: 2px;
+}
+
+/* 囲みあり */
+.c-card--hasBorder .c-card__inner {
+    gap: 0;
+    border: 1px solid theme(colors.border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.c-card--hasBorder .c-card__textContents {
+    padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .c-card__title {
+        font-size: 24px;
+    }
+
+    /* タグ */
+    .c-card__tagList {
+        font-size: 12px;
+    }
+}
+
+/* ---------------------------------------------------------
+  コラムページ 独自スタイル
+--------------------------------------------------------- */
+.p-columnPost {
+    padding: 64px 0 80px;
+}
+
+.p-columnThumbnail {
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-primary);
+    border-radius: var(--border-radius-primary);
+    overflow: hidden;
+}
+
+.p-columnThumbnail img {
+    width: 100%;
+}
+
+.p-columnPostDate {
+    display: flex;
+    gap: 24px;
+}
+
+.p-columnBottomLink {
+    margin-top: 40px;
+    border-top: 1px solid theme(colors.border-primary);
+    padding-top: 24px;
+}
+
+/* 投稿記事 */
+.p-columnPostHeader {
+    padding-bottom: 8px;
+    margin-bottom: 48px;
+}
+
+.p-columnPostTitle {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.5;
+    border-bottom: 1px solid theme(colors.border-light);
+    padding-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.p-columnPostCategories {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.p-columnCategoryTitle {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .p-columnPost {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .p-columnCategoryTitle {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+}
+
+/* ---------------------------------------------------------
+  コラム一覧
+--------------------------------------------------------- */
+
+.c-columnList {
+    list-style: none;
+    display: grid;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .c-columnList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------------------------------------------------------
+  横並びレイアウト用
+--------------------------------------------------------- */
+
+.l-row {
+    display: grid;
+    gap: 24px;
+}
+
+.l-row--3 {
+    display: grid;
+    gap: 24px;
+}
+
+.l-row--sidebar {
+    display: grid;
+    grid-auto-columns: 100%;
+    gap: 80px;
+}
+
+@media screen and (min-width: 1024px) {
+    .l-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .l-row--3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .l-row--sidebar {
+        grid-template-columns: calc(100% - 280px - 64px) 280px;
+        gap: 64px;
+    }
+}
+
+/* ---------------------------------------------------------
+  コンテンツ幅 設定用
+--------------------------------------------------------- */
+
+.l-container {
+    width: 1024px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container--medium {
+    width: 800px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container--small {
+    width: 640px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------------------------------------
+  リンク一覧 パーツ
+--------------------------------------------------------- */
+
+.c-linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.c-linkList__contents {
+    color: theme(colors.main);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 16px calc(8px + 24px + 4px) 16px 16px;
+    background-color: transparent;
+    border: 1px solid theme(colors.border-primary);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.c-linkList__contents::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("@/assets/styles/kantan/images/icon_arrow_right_bk.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+/* 外部リンクのアイコン */
+.c-linkList__contents--external::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("@/assets/styles/kantan/images/icon_external_link_bk.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+}
+
+/* 下線スタイル */
+.c-linkList--underLine {
+    gap: 0;
+}
+
+.c-linkList--underLine .c-linkList__contents {
+    border: none;
+    border-bottom: 1px solid theme(colors.main);
+    border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .c-linkList {
+        gap: 16px;
+    }
+
+    .c-linkList__contents {
+        font-size: 16px;
+        padding: 24px calc(16px + 24px + 4px) 24px 24px;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .c-linkList__contents::after {
+        right: 16px;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .c-linkList__contents:hover {
+        color: theme(colors.button-text);
+        font-weight: bold;
+        background-color: theme(colors.accent-primary);
+    }
+
+    .c-linkList__contents:hover::after {
+        background-image: url("@/assets/styles/kantan/images/icon_arrow_right_wh.svg");
+        transform: translate(8px, -50%);
+    }
+
+    /* 外部リンクのアイコン */
+    .c-linkList__contents--external:hover::after {
+        background-image: url("@/assets/styles/kantan/images/icon_external_link_wh.svg");
+        transform: translateY(-50%);
+    }
+
+    /* 下線スタイル */
+    .c-linkList--underLine {
+        gap: 0;
+    }
+}
+
+/* ---------------------------------------------------------
+  テキストリンク ユーティリティ
+  - 下線
+  - 新しいタブで開く
+--------------------------------------------------------- */
+
+/* 下線 */
+.u-link-underline {
+    text-decoration: underline;
+}
+
+/* 新しいタブで開く */
+.u-link-external {
+    text-decoration: underline;
+    display: inline-block;
+    padding-right: calc(4px + 0.875em + 4px);
+    position: relative;
+}
+
+.u-link-external::after {
+    content: "";
+    display: inline-block;
+    width: 0.875em;
+    height: 0.875em;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM2Ml80NTYpIj4KPHBhdGggZD0iTTguNDM3NSAxNy40Mzc1SDE3LjQzNzVWMC41NjI1SDAuNTYyNVY5LjU2MjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik03LjMxMjUgMTUuNzVWMTAuNjg3NU03LjMxMjUgMTAuNjg3NUgyLjI1TTcuMzEyNSAxMC42ODc1TDAuNTYyNSAxNy40Mzc1IiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM2Ml80NTYiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: calc(50% + 1px);
+    right: 4px;
+    transform: translateY(-50%);
+}
+
+/* 左側に矢印 */
+.u-link-leftArrow {
+    line-height: 1.5;
+    display: inline-block;
+    position: relative;
+    padding-left: calc(1.5em + 4px);
+}
+
+.u-link-leftArrow::after {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("@/assets/styles/kantan/images/icon_arrow_left_bk.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% + 2px);
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* ---------------------------------------------------------
+  ラベル パーツ
+--------------------------------------------------------- */
+.c-label {
+    color: theme(colors.light);
+    display: inline-block;
+    line-height: 1;
+    padding: 8px 16px;
+    background-color: theme(colors.accent-primary);
+    border-radius: 25px;
+}
+
+/* ---------------------------------------------------------
+  アイコン付き日付 パーツ
+--------------------------------------------------------- */
+
+.c-iconText {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+.c-iconText__icon {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+/* ---------------------------------------------------------
+  投稿 スタイル
+--------------------------------------------------------- */
+
+/* 最初の要素だけ上部余白を適用しない */
+#js-post > :first-child {
+    margin-top: 0;
+}
+
+.c-post {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/*
+  見出し
+---------------------------------------------- */
+.c-post .c-postEditor h1,
+.c-post .c-postEditor h2,
+.c-post .c-postEditor h3,
+.c-post .c-postEditor h4,
+.c-post .c-postEditor h5 {
+    line-height: 1.5;
+}
+
+.c-post .c-postEditor h1 {
+    font-size: 28px;
+    margin-top: 1.429em;
+    margin-bottom: 0.857em;
+}
+
+.c-post .c-postEditor h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 2.667em;
+    margin-bottom: 1.667em;
+    padding: 0 0.667em 0.333em 0.667em;
+    border-left: 8px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.c-post .c-postEditor h3 {
+    font-size: 20px;
+    margin-top: 1.6em;
+    margin-bottom: 1.2em;
+    padding: 0 0 0.4em;
+    border-bottom: 1px solid #000;
+}
+
+.c-post .c-postEditor h4 {
+    font-size: 16px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.c-post .c-postEditor h5 {
+    font-size: 14px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/*
+  段落
+---------------------------------------------- */
+.c-post .c-postEditor p {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+/*
+  画像
+---------------------------------------------- */
+.c-post .c-postEditor img {
+    max-width: 100%;
+    width: auto;
+    box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+}
+
+/*
+  リスト
+---------------------------------------------- */
+.c-post .c-postEditor ul,
+.c-post .c-postEditor ol {
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+/*
+  図表、挿絵
+---------------------------------------------- */
+.c-post .c-postEditor figure {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.c-post .c-postEditor figcaption {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/*
+  テーブル
+---------------------------------------------- */
+.c-post .c-postEditor table {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    overflow-x: scroll;
+    display: block;
+    padding-bottom: 16px;
+}
+
+.c-post .c-postEditor th,
+.c-post .c-postEditor td {
+    padding: 8px 16px;
+    border: 1px solid;
+}
+
+.c-post .c-postEditor tr:first-child th {
+    color: #fff;
+    background-color: #000;
+}
+
+.c-post .c-postEditor th {
+    color: #fff;
+    background-color: #4b4b50;
+    min-width: 200px;
+}
+
+.c-post .c-postEditor table p {
+    margin: 0;
+}
+
+/*
+  テキストリンク
+---------------------------------------------- */
+.c-post .c-postEditor a {
+    text-decoration: underline;
+}
+
+.c-post .c-postEditor a[target="_blank"] {
+    display: inline-block;
+    padding-right: calc(4px + 1em + 4px);
+    position: relative;
+    margin: 0 4px;
+}
+
+.c-post .c-postEditor a[target="_blank"]::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url("../../images/icon_external_link_bk.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(1em * 1.7 / 2);
+    transform: translateY(-50%);
+    right: 4px;
+}
+
+/*
+  インラインコード
+---------------------------------------------- */
+.c-post .c-postEditor code {
+    font-family: "Source Code Pro", monospace;
+}
+
+.c-post .c-postEditor p code {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #272a36;
+    border-radius: 2px;
+    margin: 0 4px;
+    position: relative;
+    top: -2px;
+}
+
+/*
+  コードブロック
+---------------------------------------------- */
+.c-post .c-codeBlock {
+    position: relative;
+}
+
+.c-post .c-codeBlock pre {
+    color: #f8f8f2;
+    background-color: #272a36;
+    border-radius: var(--border-radius-primary);
+    padding: 56px 24px 0 24px;
+    overflow: scroll;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.c-post .c-codeBlock .js-copyText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.c-post .c-codeBlock .js-copyText img {
+    border-radius: 0;
+    box-shadow: inherit;
+}
+
+.c-post .c-postEditor [data-filename] {
+    position: relative;
+}
+
+.c-post .c-postEditor [data-filename]::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icon_file_wh.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    z-index: 1;
+}
+
+.c-post .c-postEditor [data-filename]::after {
+    color: #fff;
+    font-size: 14px;
+    content: attr(data-filename);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 8px 40px;
+    border-radius: 4px 4px 0 0;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*
+  引用
+---------------------------------------------- */
+.c-post .c-postEditor blockquote {
+    padding: 40px 32px;
+    position: relative;
+    background-color: #fafafa;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.c-post .c-postEditor blockquote::before,
+.c-post .c-postEditor blockquote::after {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.c-post .c-postEditor blockquote::before {
+    background-image: url("../../images/icon_quote_left.svg");
+    top: -8px;
+    left: 16px;
+}
+
+.c-post .c-postEditor blockquote::after {
+    background-image: url("../../images/icon_quote_right.svg");
+    bottom: -8px;
+    right: 16px;
+}
+
+.c-post .c-postEditor blockquote p {
+    font-size: 0.875em;
+}
+
+.c-post .c-postEditor blockquote p + p {
+    margin-top: 1.5em;
+}
+
+/*
+  区切り線
+---------------------------------------------- */
+.c-post .c-postEditor hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .c-post {
+        font-size: 16px;
+    }
+
+    /*
+    見出し
+    ---------------------------------------------- */
+    .c-post .c-postEditor h1,
+    .c-post .c-postEditor h2,
+    .c-post .c-postEditor h3,
+    .c-post .c-postEditor h4 {
+        line-height: 1.5;
+    }
+
+    .c-post .c-postEditor h1 {
+        font-size: 32px;
+    }
+
+    .c-post .c-postEditor h2 {
+        font-size: 28px;
+        border-left: 16px solid #000;
+        margin-top: 4.286em;
+    }
+
+    .c-post .c-postEditor h3 {
+        font-size: 24px;
+        margin-top: 3.333em;
+    }
+
+    .c-post .c-postEditor h4 {
+        font-size: 18px;
+    }
+
+    .c-post .c-postEditor h5 {
+        font-size: 16px;
+    }
+
+    /*
+    図表、挿絵
+    ---------------------------------------------- */
+    .c-post .c-postEditor figcaption {
+        font-size: 14px;
+    }
+}
+
+/* ---------------------------------------------------------
+  SNSシェア
+--------------------------------------------------------- */
+.c-snsShare {
+    background-color: theme(colors.bg-secondary);
+    padding: 32px 24px 40px;
+}
+
+.c-snsShare__heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.c-snsShare__headingText {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    padding-right: 40px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.c-snsShare__headingText::before,
+.c-snsShare__headingText::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 32px;
+    background-color: theme(colors.main);
+    position: absolute;
+    bottom: 0;
+}
+
+.c-snsShare__headingText::before {
+    left: 0;
+    transform: rotate(-20deg);
+}
+
+.c-snsShare__headingText::after {
+    right: 0;
+    transform: rotate(20deg);
+}
+
+.c-snsShare__lead {
+    font-size: 14px;
+    text-align: center;
+}
+
+.c-snsShare__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0 0;
+    padding: 0;
+}
+
+.c-snsShare__button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.c-snsShare__button:hover {
+    transform: scale(1.2);
+}

@@ -48,6 +48,24 @@
           </button>
         </div>
       </div>
+      <div class="md:hidden mt-5">
+        <label class="cursor-pointer flex justify-end gap-2">
+          <Icon
+            :name="
+              isDarkMode
+                ? 'material-symbols:nightlight-off-outline'
+                : 'material-symbols:nightlight-badge-outline'
+            "
+            color="black"
+          />
+          <input
+            type="checkbox"
+            class="toggle"
+            v-model="isDarkMode"
+            @change="toggleDarkMode"
+          />
+        </label>
+      </div>
       <div id="navbar-with-collapse" class="hidden basis-full grow sm:block">
         <div
           class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5"
@@ -74,4 +92,14 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+  const colorMode = useColorMode()
+  const isDarkMode = ref(false)
+  const toggleDarkMode = (e) => {
+    e.target.checked
+      ? (colorMode.preference = 'dark')
+      : (colorMode.preference = 'light')
+
+    isDarkMode.value = e.target.checked
+  }
+</script>

@@ -42,4 +42,17 @@
   const { data } = await useMicroCMSGetList<Category[]>({
     endpoint: 'categories'
   })
+
+  const router = useRouter()
+  const runtimeConfig = useRuntimeConfig()
+  const currentPath = computed(
+    () => `${runtimeConfig.public.appUrl}${router.currentRoute.value.path}`
+  )
+  // 動的にheadの内容を設定
+  useHead({
+    meta: [{ property: 'og:url', content: currentPath }],
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} - he's at blog` : "he's at blog"
+    }
+  })
 </script>

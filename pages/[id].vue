@@ -8,7 +8,7 @@
           </li>
         </ul>
       </div>
-      <h1 class="p-columnPostTitle" id="js-postTitle">{{ data.title }}</h1>
+      <h1 class="p-columnPostTitle" id="js-postTitle">{{ data?.title }}</h1>
 
       <!-- 投稿日と更新日 -->
       <div class="p-columnPostDate text-[0.875rem]">
@@ -81,7 +81,7 @@
         <ul class="c-snsShare__list" id="js-snsShareList">
           <li>
             <a
-              :href="`https://twitter.com/share?text=${data.title}&amp;url=https://beginner.kantan-cms-starter.com${$route.fullPath}`"
+              :href="`https://twitter.com/share?text=${data.title}&amp;url=${url}`"
               class="c-snsShare__button js-getSnsLink"
               data-sns="twitter"
               title="Twitterでシェア"
@@ -98,7 +98,7 @@
           </li>
           <li>
             <a
-              :href="`http://www.facebook.com/share.php?u=https://beginner.kantan-cms-starter.com${$route.fullPath}`"
+              :href="`http://www.facebook.com/share.php?u=${url}`"
               class="c-snsShare__button js-getSnsLink"
               data-sns="facebook"
               title="Facebookでシェア"
@@ -114,7 +114,7 @@
           </li>
           <li>
             <a
-              :href="`https://social-plugins.line.me/lineit/share?url=https://beginner.kantan-cms-starter.com${$route.fullPath}`"
+              :href="`https://social-plugins.line.me/lineit/share?url=${url}`"
               class="c-snsShare__button js-getSnsLink"
               data-sns="line"
               title="LINEでシェア"
@@ -131,7 +131,7 @@
             <button
               type="button"
               class="c-snsShare__button js-getSnsLink js-copyLink"
-              :data-link="`https://beginner.kantan-cms-starter.com${$route.fullPath}`"
+              :data-link="url"
               data-sns=""
               title="リンクをコピー"
             >
@@ -157,11 +157,26 @@
 <script setup lang="ts">
   import { Blog } from '~/types/blog'
 
-  const { params } = useRoute()
+  const runtimeConfig = useRuntimeConfig()
+
+  const { params, fullPath } = useRoute()
+
+  const url = runtimeConfig.public.appUrl + fullPath
 
   const { data } = await useMicroCMSGetListDetail<Blog>({
     endpoint: 'blogs',
     contentId: Array.isArray(params.id) ? params.id[0] : params.id
+  })
+
+  const article = data.value
+
+  useHead({
+    title: article?.title,
+    meta: [
+      { property: 'og:title', content: article?.title },
+      { property: 'og:description', content: article?.title },
+      { property: 'og:image', content: article?.eyecatch.url }
+    ]
   })
 </script>
 

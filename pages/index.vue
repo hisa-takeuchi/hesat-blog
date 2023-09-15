@@ -38,6 +38,15 @@
   const { data } = await useMicroCMSGetList<Blog>({
     endpoint: 'blogs'
   })
+
+  useHead({
+    title: 'TOP',
+    meta: [
+      // { property: 'og:title', content: data.title },
+      // { property: 'og:description', content: data.title },
+      // { property: 'og:image', content: data.eyecatch?.url }
+    ]
+  })
 </script>
 
 <style scoped></style>

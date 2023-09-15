@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './components/**/*.{vue,js,jsx,ts,tsx}',
     './pages/**/*.{vue,js,jsx,ts,tsx}',
-    './layouts/**/*.{vue,js,jsx,ts,tsx}',
+    './layouts/**/*.{vue,js,jsx,ts,tsx}'
   ],
   theme: {
     colors: {
@@ -18,15 +18,15 @@ module.exports = {
       'accent-primary': '#000',
       'accent-red': '#f82727',
       'border-primary': '#000',
-      'border-light': '#ddd',
+      'border-light': '#ddd'
     },
     extend: {
       fontFamily: {
-        notosansjp: ['Noto Sans JP', 'sans-serif'],
+        notosansjp: ['Noto Sans JP', 'sans-serif']
       }
     },
-    container: {
-    }
+    container: {}
   },
-  plugins: [require("daisyui")],
+  darkMode: 'class',
+  plugins: [require('daisyui')]
 }
